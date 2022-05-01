@@ -1,2 +1,1 @@
-def isworking():
-    print("bruh")
+
