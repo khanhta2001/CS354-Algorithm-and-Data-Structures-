@@ -1,1 +1,2 @@
-
+def isworking():
+    print("bruh")
