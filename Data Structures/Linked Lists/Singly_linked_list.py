@@ -1,5 +1,7 @@
 class Singly_Linked_List:
-    def __init__(self):
+    def __init__(self, array = None, element = None):
+        self.array = array
+        self.element = element
         pass
 
     def Get(self):
