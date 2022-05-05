@@ -14,51 +14,58 @@ class Singly_Linked_List:
 
     def GetIndex(self, value):
         i = 0
-        while self.head is not None:
-            if self.head.value == value:
+        temp = self.head
+        while temp is not None:
+            if temp.value == value:
                 return i
+            temp = temp.next
             i += 1
         return -1
 
     def Push(self, value):
-        while self.head.next is not None:
-            self.head = self.head.next
-        self.head.next = node(value)
+        temp = self.head
+        while temp.next is not None:
+            temp = temp.next
+        temp.next = node(value)
 
-    def Push(self, value, index):
+    def PushIndex(self, value, index):
         i = 0
-        while self.head.next is not None:
-            if i == index:
-                break
-            self.head = self.head.next
-
-        prev_node = self.head
+        temp = self.head
+        while i < index - 1:
+            temp = temp.next
+            i += 1
+        prev_node = temp
         medium = node(value)
-        con_node = self.head.next
+        con_node = temp.next
         prev_node.next = medium
         medium.next = con_node
 
     def Pop(self):
-        while self.head.next.next is not None:
-            self.head = self.head.next
-        popped_node = self.head.next
-        self.head.next = popped_node.next
-        temp = popped_node.value
+        temp = self.head
+        while temp.next.next is not None:
+            temp = temp.next
+        popped_node = temp.next
+        temp.next = popped_node.next
+        val = popped_node.value
         del popped_node
-        return temp
+        return val
 
-    def Pop(self,index):
+    def PopIndex(self,index):
         i = 0
-        while self.head.next.next is not None:
-            if i == index:
-                break
-            self.head = self.head.next
+        temp = self.head
+        while i < index-1:
+            temp = temp.next
             i += 1
-        popped_node = self.head.next
-        self.head.next = popped_node.next
-        temp = popped_node.value
+        popped_node = temp.next
+        temp.next = popped_node.next
+        val = popped_node.value
         del popped_node
-        return temp
+        return val
 
+    def Print(self):
+        temp = self.head
+        while temp is not None:
+            print(temp.value)
+            temp = temp.next
 
 
