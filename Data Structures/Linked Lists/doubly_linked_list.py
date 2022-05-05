@@ -89,16 +89,3 @@ class Doubly_Linked_List:
         while temp is not None:
             print(temp.value)
             temp = temp.next
-
-
-
-def main():
-    list1 = [1,2,3,4,5,6,7]
-    test1 = Doubly_Linked_List(list1)
-    test1.Pop(2)
-    test1.Print()
-
-
-main()
-
-
