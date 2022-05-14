@@ -8,7 +8,7 @@ class Stack:
     def push(self, element):
         self.array.append(element)
 
-    def Pop(self):
+    def pop(self):
         element = self.array[-1]
         self.array.remove(element)
         return element

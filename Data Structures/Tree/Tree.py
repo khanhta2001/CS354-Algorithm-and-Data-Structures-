@@ -3,8 +3,12 @@ class node:
         self.value = value
         self.children = []
 
+
 class Tree:
-    def __init__(self,dictionary):
+    """
+    requires to have a root node
+    """
+    def __init__(self, dictionary):
         self.parents = list(dictionary.values())
         self.children = list(dictionary.keys())
         self.parents_node = {}
@@ -28,7 +32,8 @@ class Tree:
     def push(self, parent, child):
         if parent in self.parents:
             self.parents_node[parent].children.append(child)
-    def pop(self, child, parent = None):
+
+    def pop(self, child, parent=None):
         if parent is None:
             for key in self.parents_node:
                 if child in self.parents_node[key].children:
