@@ -7,3 +7,5 @@ class Node:
 class HeapTree:
     def __init__(self):
         pass
+    def HeapSort(self):
+        pass
