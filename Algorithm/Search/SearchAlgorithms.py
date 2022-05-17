@@ -62,7 +62,6 @@ def LinearSearch(array, target):
             return i
     return -1
 
-
 def BinarySearch_Helper(array, target):
     if isSorted(array):
         return BinarySearch(array, target)
