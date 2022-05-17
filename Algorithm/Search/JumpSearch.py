@@ -13,5 +13,3 @@ def JumpSearch(array, target):
         if array[s] == target:
             return s
     return -1
-
-print(JumpSearch([1,2,3,4,5,6,7,8,9], 9))
