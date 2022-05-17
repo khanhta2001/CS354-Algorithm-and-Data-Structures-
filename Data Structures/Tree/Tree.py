@@ -1,4 +1,4 @@
-class node:
+class Node:
     def __init__(self, value):
         self.value = value
         self.children = []
@@ -16,10 +16,10 @@ class Tree:
         for i in self.parents:
             if i not in self.children:
                 root = i
-        self.root_node = node(root)
+        self.root_node = Node(root)
         hashMap = {self.root_node.value: self.root_node}
         for child in self.children:
-            child_node = node(child)
+            child_node = Node(child)
             hashMap[child] = child_node
 
         for child in self.children:
@@ -42,7 +42,7 @@ class Tree:
             if child in self.parents_node[parent].children:
                 self.parents_node[parent].children.remove(child)
 
-    def Print(self):
+    def print(self):
         looked = [self.root_node]
         while len(looked) != 0:
             string = ""
