@@ -6,7 +6,7 @@ class Node:
 
 
 class BinaryTree:
-    def __init__(self):
+    def __init__(self, dictionary):
         pass
 
     def insert(self):

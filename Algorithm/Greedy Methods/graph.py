@@ -1,5 +1,9 @@
 class Graph:
+    """
+    Take in a dictionary
+    """
     def __init__(self, data):
+
         self.a = 1
 
     def adjacent(self, x, y):
